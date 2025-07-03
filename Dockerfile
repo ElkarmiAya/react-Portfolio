@@ -10,7 +10,7 @@ RUN npm ci
 
 # copier le reste du code 
 
-COPY ..
+COPY . .
 
 #exposer le port 
 
