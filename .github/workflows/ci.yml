@@ -26,5 +26,5 @@ jobs:
     - name: build project
       run: npm run build --if-present
     - name:  créer l'image docker 
-      run: docker build -t my-app:${{ matrix.node-version }}
+      run: docker build -t my-app:${{ matrix.node-version }}.
    
