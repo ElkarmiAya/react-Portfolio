@@ -25,6 +25,10 @@ jobs:
       run: npm ci
     - name: build project
       run: npm run build --if-present
+    - name: authentification docker hub 
+      run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
     - name:  créer l'image docker 
-      run: docker build -t my-app:${{ matrix.node-version }} .
+      run: docker build -t elkarmiaya/imagesrepository:latest .
+    - name: push the docker image*
+      run: docker push elkarmiaya/imagesrepository:latest .
    
