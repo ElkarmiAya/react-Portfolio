@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 22.x]
+        node-version: [20.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -26,5 +26,5 @@ jobs:
     - name: build project
       run: npm run build --if-present
     - name:  créer l'image docker 
-      run: docker build -t my-app:${{ matrix.node-version }}.
+      run: docker build -t my-app:${{ matrix.node-version }} .
    
