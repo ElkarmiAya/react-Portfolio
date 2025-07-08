@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Node.js CI 
 
 on:
   push:
@@ -49,5 +49,7 @@ jobs:
              docker stop portfolio || true
              docker rm portfolio || true
              docker run -d -p 3000:3000 --name portfolio elkarmiaya/imagesrepository:latest
+             docker image prune -f
+
 
    
