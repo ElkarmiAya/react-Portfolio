@@ -46,9 +46,9 @@ jobs:
           port: ${{ secrets.SSH_PORT}}
           script: |
              docker pull elkarmiaya/imagesrepository:Devlatest
-             docker stop portfolio || true
-             docker rm portfolio || true
-             docker run -d -p 3001:3000 --name portfolio elkarmiaya/imagesrepository:Devlatest
+             docker stop dev-portfolio || true
+             docker rm dev-portfolio || true
+             docker run -d -p 3001:3000 --name dev-portfolio elkarmiaya/imagesrepository:Devlatest
  
 
 
