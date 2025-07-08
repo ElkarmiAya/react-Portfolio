@@ -49,7 +49,7 @@ jobs:
              docker stop portfolio || true
              docker rm portfolio || true
              docker run -d -p 3001:3000 --name portfolio elkarmiaya/imagesrepository:devlatest
-             docker image prune -f
+            
 
 
    
